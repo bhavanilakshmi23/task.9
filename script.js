@@ -1,0 +1,43 @@
+document.addEventListener("DOMContentLoaded", function publishToTable() {
+    const firstname= document.getElementById('firstname').value;
+    const lastname= document.getElementById('lastname').value;
+    const address= document.getElementById('address').value;
+    const pincode= document.getElementById('pincode').value;
+   const gender = document.getElementById('gender').value;
+   const food= document.getElementById('gender').value;
+   const state= document.getElementById('gender').value;
+   const country= document.getElementById('gender').value;
+   map(button=>button.addEventListener('click', function() {
+    if(firstname && lastname && address && pincode && gender && food && state && country){
+    const tableElement = document.getElementById('table');
+    const trElement = document.createElement('tr');
+    const tbodyElement = document.createElement('tbody');
+    const firstnameEle= document.createElement('td');
+    const lastnameEle= document.createElement('td');
+    const addressEle= document.createElement('td');
+    const pincodeEle= document.createElement('td');
+    const genderEle= document.createElement('td');
+    const foodEle= document.createElement('td');
+    const stateEle= document.createElement('td');
+    const countryEle= document.createElement('td');
+    firstnameEle.innerHTML= firstname;
+    lastnameEle.innerHTML= lastname;
+    addressEle.innerHTML= address;
+    pincodeEle.innerHTML= firstname;
+    genderEle.innerHTML= firstname;
+    foodEle.innerHTML= firstname;
+    stateEle.innerHTML= firstname;
+    countryEle.innerHTML= firstname;
+   trElement.appendChild(firstnameEle);
+   trElement.appendChild(lastnameEle);
+   trElement.appendChild(addressEle);
+   trElement.appendChild(pincodeEle);
+   trElement.appendChild(genderEle);
+   trElement.appendChild(foodEle);
+   trElement.appendChild(stateEle);
+   trElement.appendChild(countryEle);
+   tbodyElement.appendChild(trElement);
+   tableElement.appendChild(tbodyElement);
+   };
+}));
+});
